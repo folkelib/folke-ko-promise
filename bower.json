@@ -1,0 +1,20 @@
+{
+  "name": "folke-ko-promise",
+  "homepage": "https://github.com/folkelib/folke-ko-promise",
+  "authors": [
+    "Sidoine De Wispelaere <sidoine@sidoine.net>"
+  ],
+  "description": "Add promises support to knockout observables",
+  "main": "folke-ko-promise.js",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
