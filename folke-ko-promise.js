@@ -1,4 +1,5 @@
 define(["require", "exports", "knockout", "es6-promise"], function (require, exports, ko, Promise) {
+    "use strict";
     ko.subscribable.fn.whenNotNull = function () {
         var _this = this;
         if (this()) {
