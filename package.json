@@ -1,0 +1,33 @@
+{
+  "name": "folke-ko-promise",
+  "version": "1.0.0",
+  "description": "Mixes promises and knockout",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "typings install && tsc -p ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/folkelib/folke-ko-promise.git"
+  },
+  "keywords": [
+    "promise",
+    "knockout"
+  ],
+  "author": "Sidoine De Wispelaere",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/folkelib/folke-ko-promise/issues"
+  },
+  "homepage": "https://github.com/folkelib/folke-ko-promise#readme",
+  "dependencies": {
+    "es6-promise": "^3.2.1",
+    "knockout": "^3.4.0"
+  },
+  "devDependencies": {
+    "typescript": "^1.8.10",
+    "typings": "^1.3.2"
+  }
+}

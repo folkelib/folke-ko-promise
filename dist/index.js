@@ -1,6 +1,8 @@
-define(["require", "exports", "knockout", "es6-promise"], function (require, exports, ko, Promise) {
-    "use strict";
-    ko.subscribable.fn.whenNotNull = function () {
+"use strict";
+var ko = require("knockout");
+var Promise = require("es6-promise");
+function register() {
+    ko.subscribable.fn['whenNotNull'] = function () {
         var _this = this;
         if (this()) {
             return Promise.Promise.resolve(this());
@@ -14,4 +16,5 @@ define(["require", "exports", "knockout", "es6-promise"], function (require, exp
             });
         }
     };
-});
+}
+exports.register = register;
