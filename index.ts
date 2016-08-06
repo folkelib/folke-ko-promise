@@ -1,13 +1,18 @@
-﻿import * as ko from "knockout";
-import * as Promise from "es6-promise"
+﻿import * as knockout from "knockout";
+
+declare module "knockout" {    
+    interface SubscribableFunctions<T>{
+        whenNotNull: () => Promise<T>;
+    }
+}
 
 export function register(){
-    ko.subscribable.fn['whenNotNull'] = function() {
+    knockout.subscribable.fn['whenNotNull'] = function() {
         if (this()) {
-            return Promise.Promise.resolve(this());
+            return Promise.resolve(this());
         } else {
-            return new Promise.Promise<any>((resolve, reject) => {
-                var sub = (<ko.Subscribable<any>>this).subscribe(newValue => {
+            return new Promise<any>((resolve, reject) => {
+                var sub = (<knockout.Subscribable<any>>this).subscribe(newValue => {
                     resolve(newValue);
                     sub.dispose();
                 });
