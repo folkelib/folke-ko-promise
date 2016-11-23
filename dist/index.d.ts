@@ -1,5 +1,5 @@
 declare global  {
-    interface SubscribableFunctions<T> {
+    interface KnockoutSubscribableFunctions<T> {
         whenNotNull: () => Promise<T>;
     }
 }
