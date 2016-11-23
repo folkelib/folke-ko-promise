@@ -1,6 +1,6 @@
 ﻿import * as knockout from "knockout";
 
-declare module "knockout" {    
+declare global {    
     interface SubscribableFunctions<T>{
         whenNotNull: () => Promise<T>;
     }
@@ -12,7 +12,7 @@ export function register(){
             return Promise.resolve(this());
         } else {
             return new Promise<any>((resolve, reject) => {
-                var sub = (<knockout.Subscribable<any>>this).subscribe(newValue => {
+                var sub = (<KnockoutSubscribable<any>>this).subscribe(newValue => {
                     resolve(newValue);
                     sub.dispose();
                 });

@@ -1,4 +1,4 @@
-declare module "knockout" {
+declare global  {
     interface SubscribableFunctions<T> {
         whenNotNull: () => Promise<T>;
     }
