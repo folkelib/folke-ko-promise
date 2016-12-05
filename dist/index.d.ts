@@ -1,3 +1,4 @@
+/// <reference types="knockout" />
 declare global  {
     interface KnockoutSubscribableFunctions<T> {
         whenNotNull: () => Promise<T>;
